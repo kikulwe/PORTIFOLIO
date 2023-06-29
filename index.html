@@ -5,38 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PERSONAL PORTIFOLIO</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/6a6d10df6d.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div id="header">
     <div class="container">
       <nav>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">services</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">CONTACTS</a></li>
         </ul>
       </nav>
       <div class="header-text">
-        <p>software developer</p>
+        <!---<p>software developer</p>----->
         <h1>Hi, Im <span>Andrew</span> Kikulwe</h1>
       </div>
     </div>
   </div>
+
+  <!--about-->
   <div id="about">
     <div class="container">
       <div class="row">
         <div class="about-col-1">
-          <img src="images/headshot.jpg">
+          <img src="images/headshot.jpeg" width="400" 
+          height="500">
         </div>
         <div class="about-col-2">
           <h1 class="subtitle">About Me</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus quis expedita debitis, dolorum ipsam harum cupiditate aliquam architecto odit non officiis laboriosam nostrum ex modi perferendis tempore autem necessitatibus maiores!</p>
 
           <div class="tab-titles">
-            <p class="tab-links active-link">Skills</p>
-            <p class="tab-links">Experience</p>
-            <p class="tab-links">Education</p>
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('projects')">Projects</p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li><span>FRONTEND</span><br>Designing web Interfaces</li>
+              <li><span>WEB DEVELOPMENT</span><br>Web Application Development</li>
+              <li><span>APP DEVELOPMENT</span><br>Building Android & IOS apps</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="projects">
+            <ul>
+              <li><span>FEBRUARY 2023</span><br>GOGGLE DEVELOPERS' COMMUNITY HACKERTHON<br>Designing web Interfaces</li>
+              <li><span>NOVEMBER 2022</span><br>BRANDWAVE<br>An online advertising platform for small businesses</li>
+              <li><span>JULY - AUGUST 2022</span><br>LIBRARY MANAGEMENT SYSTEM<br>A System that helps to manage borrowing and returning of books in libraries </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2021-2023</span><br>MAKERERE UNIVERSITY<BR>BACHELORS DEGREE IN COMPUTER SCIENCE</li>
+              <li><span>2014 - 2019</span><br>ST.MARYS' COLLEGE KISUBI<br>HIGH SCHOOL DIPLOMA</li>
+            </ul>
           </div>
           <div>
             
@@ -46,6 +70,52 @@
     </div>
 
   </div>
+  
+<!-----services----->
+  <div id="services">
+    <div class="container">
+      <h1 class="subtitle">My Services</h1>
+      <div class="services-list">
+        <div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aut, quo nihil, eum beatae reprehenderit excepturi eaque, unde dolorum laboriosam quod quae corrupti voluptate fugiat modi placeat tenetur? Rerum, iusto?</p>
+          <a href="">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-brands fa-app-store"></i>
+          <h2>Application Development</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aut, quo nihil, eum beatae reprehenderit excepturi eaque, unde dolorum laboriosam quod quae corrupti voluptate fugiat modi placeat tenetur? Rerum, iusto?</p>
+          <a href="">Learn more</a>
+        </div>
+        <div>
+          <i class="fa-solid fa-code"></i>
+          <h2>Web Development</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aut, quo nihil, eum beatae reprehenderit excepturi eaque, unde dolorum laboriosam quod quae corrupti voluptate fugiat modi placeat tenetur? Rerum, iusto?</p>
+          <a href="">Learn more</a>
+        </div>
+      </div>
+
+
+    </div>
+  
+
+  </div>
+  <script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    
+    function opentab(tabname){
+      for(tablink of tablinks){
+         tablink.classList.remove("active-link");
+      }
+      for(tabcontent of tabcontents){
+         tabcontent.classList.remove("active-tab");
+      }
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+    }
+  </script>
   
 </body>
 </html>
