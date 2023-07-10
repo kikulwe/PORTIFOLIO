@@ -289,6 +289,8 @@ color: #ff004f;
   transition: 0.5s;
 }
 
+
+/*contact*/
 .contact-left{
   flex-basis: 35%;
 }
@@ -328,7 +330,29 @@ contact-right{
 }
 
 .btn.btn2{
-  display:inline block;
+  display:inline-block;
   background:#ff004f;
+}
 
+.contact-right form{
+  width: 100%;
+}
+
+form input, textarea{
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+form-btn2{
+  padding-left: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
 }
