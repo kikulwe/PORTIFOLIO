@@ -356,3 +356,24 @@ form-btn2{
   margin-top: 20px;
   cursor: pointer;
 }
+
+#msg{
+  color:#61b752;
+  margin: top -40px; 
+  display: block;
+}
+
+
+
+form-btn2{
+  padding-left: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#msg{
+  color:#61b752;
+  margin: top -40px; 
+  display: block;
+}
